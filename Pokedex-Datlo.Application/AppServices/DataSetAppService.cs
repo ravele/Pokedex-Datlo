@@ -189,8 +189,6 @@ namespace Pokedex_Datlo.Application.AppServices
 
         public List<Dictionary<string, string>> ImportIdsFromExcel(Stream fileStream)
         {
-            var importedIds = new List<IdImport>();
-
             // Obter o importador apropriado do factory.
             var fileImporter = _fileImporterFactory.GetFileImporter(FileType.Excel);
 
