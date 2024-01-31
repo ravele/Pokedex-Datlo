@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>Pokedex_Datlo.Application</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pokedex-Datlo.Domain\Pokedex-Datlo.Domain.csproj" />
+    <ProjectReference Include="..\Pokedex-Datlo.Infrastructure\Pokedex-Datlo.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
