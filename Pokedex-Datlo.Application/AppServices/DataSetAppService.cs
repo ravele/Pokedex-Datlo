@@ -108,7 +108,7 @@ namespace Pokedex_Datlo.Application.AppServices
 
                 if (column == null)
                 {
-                    // Lidar com a situação em que o nome da coluna do filtro não é encontrado.
+                    // Quando o nome da coluna do filtro não é encontrado.
                     throw new InvalidOperationException($"Coluna '{columnName}' não encontrada no conjunto de dados.");
                 }
 
@@ -126,8 +126,7 @@ namespace Pokedex_Datlo.Application.AppServices
 
         private bool CompareValues(string cellValue, string filterValue, FilterOperator filterOperator, DataType dataType)
         {
-            // Lógica para comparar os valores com base no operador e no tipo de dados.
-            // Neste exemplo, estamos fazendo comparações de igualdade para texto e números.
+            // Comparações de igualdade para texto e números.
 
             switch (filterOperator)
             {
@@ -139,8 +138,6 @@ namespace Pokedex_Datlo.Application.AppServices
 
                 case FilterOperator.Contains:
                     return cellValue.Contains(filterValue, StringComparison.OrdinalIgnoreCase);
-
-                // Outros casos conforme necessário.
 
                 default:
                     throw new ArgumentException($"Operador de filtro '{filterOperator}' não suportado.");
@@ -163,8 +160,7 @@ namespace Pokedex_Datlo.Application.AppServices
                     columns.Add(new Column
                     {
                         Name = columnName,
-                        DataType = dataType,
-                        // Outras propriedades e configurações necessárias.
+                        DataType = dataType
                     });
                 }
             }
@@ -174,8 +170,7 @@ namespace Pokedex_Datlo.Application.AppServices
 
         private DataType InferDataType(string value)
         {
-            // Lógica para inferir o tipo de dados com base no valor.
-            // Neste exemplo, verifica se o valor pode ser convertido para número ou permanece como texto.
+            // Verifica se o valor pode ser convertido para número ou permanece como texto.
 
             if (int.TryParse(value, out _))
             {

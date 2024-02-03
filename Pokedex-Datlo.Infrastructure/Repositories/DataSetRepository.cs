@@ -29,7 +29,7 @@ namespace Pokedex_Datlo.Infrastructure.Repositories
         public List<Dictionary<string, string>> GetValuesForIds(List<Dictionary<string, string>> ids)
         {
             var idSet = new HashSet<string>(ids.Select(id => id["Id"]));
-            // Consulta do DataSet para obter os valores correspondentes aos IDs
+            
             var result = _dataSets
                 .FirstOrDefault().Data
                 .Where(item => idSet.Contains(item["Id"]))
